@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartCalculator.Views.FormulasDetail"
+             Title="Vzorce"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="0,0,5,0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="37"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="37"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="25"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="Vzorec:" Grid.Column="0" HorizontalOptions="End" FontSize="24"></Label>
+                <Label x:Name="Formula" Grid.Column="1" HorizontalOptions="Start" FontSize="24" Text="P=W/t"></Label>
+            </Grid>
+            <Label x:Name="FirstNameOfValue" Grid.Column="1" Grid.Row="2" HorizontalOptions="End" FontSize="28" VerticalOptions="Center"></Label>
+            <Entry x:Name="Number1" Grid.Column="2" Grid.Row="2" Focused="Number1_Focused" Keyboard="Numeric" Placeholder="zadejte cislo" Margin="0,5,0,0"></Entry>
+            <Label x:Name="FirstNameOfUnit" Grid.Row="2" Grid.Column="3" FontSize="28" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+            <Label x:Name="SecondNameOfValue" Grid.Row="4" Grid.Column="1" FontSize="28" HorizontalOptions="End" VerticalOptions="Center"></Label>
+            <Entry x:Name="Number2" Grid.Row="4" Grid.Column="2" Placeholder="zadejte cislo" VerticalOptions="Center" Keyboard="Numeric" Margin="0,5,0,0"></Entry>
+            <Label x:Name="SecondNameOfUnit" Grid.Row="4" Grid.Column="3" FontSize="28" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+            <Button x:Name="ResultButton" Clicked="ResultButton_Clicked" Text="Vypocitej" Grid.Column="1" HorizontalOptions="End" VerticalOptions="StartAndExpand" WidthRequest="110" HeightRequest="40" Grid.Row="7"></Button>
+
+            <Grid Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" FontAttributes="Bold" FontSize="28" HorizontalOptions="End" Text="Vysledek:"></Label>
+                <ScrollView Grid.Row="0" Grid.Column="1">
+                    <ContentView Grid.Row="0" Grid.Column="1" BackgroundColor="White">
+                        <Label x:Name="Result" Text="0" FontSize="28"></Label>
+                    </ContentView>
+                </ScrollView>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</ContentPage>

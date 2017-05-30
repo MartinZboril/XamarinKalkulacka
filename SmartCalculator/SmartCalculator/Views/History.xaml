@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartCalculator.Views.History"
+             Title="Historie">
+    <StackLayout>
+        <ListView x:Name="ResultListView" RowHeight="220">
+            <ListView.ItemTemplate>
+                <DataTemplate>                   
+                    <ViewCell IsEnabled="True" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="10"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" ></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="3" ></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="3"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label BackgroundColor="Black" Grid.Row="0" Grid.ColumnSpan="3"></Label>
+
+                                <Label Text="{Binding Name}" Grid.Row="1" Grid.Column="0" FontSize="24" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+
+                                <Image Source="delete.png" Grid.Row="1" Grid.Column="1">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DeleteClicked"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="{Binding Favourite}" Grid.Row="1" Grid.Column="2">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="FavouriteClicked"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                
+                                <Label BackgroundColor="Black" Grid.Row="2" Grid.ColumnSpan="3"></Label>
+                            </Grid>
+
+                            <Grid Grid.Column="1" Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5" ></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="65"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Vzorec:" HorizontalOptions="End" FontSize="16"></Label>
+                                    <Label Text="{Binding Formula}" Grid.Column="1" FontSize="16"></Label>
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding NameValue1}" HorizontalOptions="End" FontAttributes="Bold" FontSize="16"></Label>
+                                    <Label Text="{Binding Value1}" Grid.Column="1" FontSize="16"></Label>
+                                </Grid>
+
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding NameValue2}" HorizontalOptions="End" FontAttributes="Bold" FontSize="16"></Label>
+                                    <Label Text="{Binding Value2}" Grid.Column="1" FontSize="16"></Label>
+                                </Grid>
+
+                                <Grid Grid.Row="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Vysledek:" HorizontalOptions="End" FontAttributes="Bold" FontSize="16"></Label>
+                                    <Label Text="{Binding ResultValue}" Grid.Column="1" FontSize="16"></Label>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartCalculator.Views.BasicCalculatorPage"
+             Title="Standardní kalkulačka" 
+             BackgroundColor="WhiteSmoke">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollView Grid.Row="0" Grid.ColumnSpan="4">
+            <ContentView Grid.Row="0" Grid.ColumnSpan="4" BackgroundColor="White">
+                <Label x:Name="Output" Text="0" FontSize="42" Grid.Column="0" HorizontalTextAlignment="End" VerticalTextAlignment="End">
+                </Label>
+            </ContentView>
+        </ScrollView>
+        
+        <Button Text="(" Grid.Row="1" Grid.Column="0" BackgroundColor="WhiteSmoke" BorderWidth="0" Clicked="LeftBracket_OnClicked" FontSize="20"/>
+        <Button Text=")" Grid.Row="1" Grid.Column="1"  BackgroundColor="WhiteSmoke" Clicked="RightBracket_OnClicked" FontSize="20"/>
+        <Button x:Name="Square " Text="x²" Grid.Row="1" Grid.Column="2" Clicked="Square__OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button Text="√" Grid.Row="1" Grid.Column="3" BackgroundColor="WhiteSmoke" FontSize="20" Clicked="Root__OnClicked"/>
+
+        <Button x:Name="DeleteCurrentExample" Text="CE" Grid.Row="2" Grid.Column="0" Clicked="DeleteCurrentExample_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="DeleteAll" Text="C" Grid.Row="2" Grid.Column="1" Clicked="DeleteAll_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="DeleteOneChar" Text="DEL" Grid.Row="2" Grid.Column="2" Clicked="DeleteOneChar_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Divider" Text="÷" Grid.Row="2" Grid.Column="3"  Clicked="Divider_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+
+        <Button x:Name="Seven" Text="7" Grid.Row="3" Grid.Column="0" Clicked="Seven_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Eight" Text="8" Grid.Row="3" Grid.Column="1" Clicked="Eight_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Nine" Text="9" Grid.Row="3" Grid.Column="2" Clicked="Nine_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Multiply" Text="x" Grid.Row="3" Grid.Column="3" Clicked="Multiply_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+
+        <Button x:Name="Four" Text="4" Grid.Row="4" Grid.Column="0" Clicked="Four_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Five" Text="5" Grid.Row="4" Grid.Column="1" Clicked="Five_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Six" Text="6" Grid.Row="4" Grid.Column="2" Clicked="Six_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Minus" Text="-" Grid.Row="4" Grid.Column="3" Clicked="Minus_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+
+        <Button x:Name="One" Text="1" Grid.Row="5" Grid.Column="0" Clicked="One_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Two" Text="2" Grid.Row="5" Grid.Column="1" Clicked="Two_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Three" Text="3" Grid.Row="5" Grid.Column="2" Clicked="Three_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="Plus" Text="+" Grid.Row="5" Grid.Column="3" Clicked="Plus_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+
+        <Button Text="±" Grid.Row="6" Grid.Column="0" BackgroundColor="WhiteSmoke" FontSize="20" Clicked="ChangeValueOfNumber_Clicked"/>
+        <Button Text="0" Grid.Row="6" Grid.Column="1" Clicked="Zero_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+        <Button Text=","  Grid.Row="6" Grid.Column="2" BackgroundColor="WhiteSmoke" FontSize="20" Clicked="Comma_OnCLicked"/>
+        <Button x:Name="Result" Text="=" Grid.Row="6" Grid.Column="3" Clicked="Result_OnClicked" BackgroundColor="WhiteSmoke" FontSize="20"/>
+    </Grid>
+</ContentPage>

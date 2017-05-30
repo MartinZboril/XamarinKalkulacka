@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartCalculator.Views.ConvertorDetailPage"
+             Title="Převodník"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,0,5,0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="42"></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0" Grid.Column="1">
+                <ContentView Grid.Row="0" Grid.Column="1" BackgroundColor="White">
+                    <Label x:Name="Output" Text="0" FontSize="42" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
+                </ContentView>
+            </ScrollView>
+            <Picker x:Name="PickerList" Focused="PickerList_Focused" Grid.Column="1" Grid.Row="2" IsVisible="True">
+                    <Picker.Items>
+                        <x:String>Option 1</x:String>
+                        <x:String>Option 2</x:String>
+                        <x:String>Option 3</x:String>
+                        <x:String>Option 4</x:String>
+                        <x:String>Option 5</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            <ScrollView Grid.Row="4" Grid.Column="1">
+                <ContentView Grid.Row="4" Grid.Column="1" BackgroundColor="White">
+                    <Label x:Name="Output1" Text="0" HorizontalOptions="Start" VerticalOptions="Center" FontSize="38"></Label>
+                </ContentView>
+            </ScrollView>
+            <Picker x:Name="PickerList1" Focused="PickerList1_Focused"  Grid.Column="1" Grid.Row="6" IsVisible="True">
+                    <Picker.Items>
+                        <x:String>Option 1</x:String>
+                        <x:String>Option 2</x:String>
+                        <x:String>Option 3</x:String>
+                        <x:String>Option 4</x:String>
+                        <x:String>Option 5</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="WhiteSmoke">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="2" Text="CE" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="DeleteAll_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="3" Text="DEL" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="DeleteOneChar_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="3" Grid.Row="1" Text="7" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Seven_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="2" Grid.Row="1" Text="8" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Eight_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="1" Grid.Row="1" Text="9" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Seven_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="3" Grid.Row="2" Text="6" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Six_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="2" Grid.Row="2" Text="5" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Five_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="1" Grid.Row="2" Text="4" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Four_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="3" Grid.Row="3" Text="3" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Three_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="2" Grid.Row="3" Text="2" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Two_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="1" Grid.Row="3" Text="1" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="One_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="2" Grid.Row="4" Text="0" FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Zero_OnClicked" BorderWidth="0"/>
+            <Button Grid.Column="3" Grid.Row="4" Text="," FontSize="20" BackgroundColor="WhiteSmoke" Clicked="Comma_OnCLicked" BorderWidth="0"/>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>

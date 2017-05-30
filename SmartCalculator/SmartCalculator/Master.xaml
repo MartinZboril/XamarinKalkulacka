@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartCalculator.Master"
+             Title="Menu"
+             BackgroundColor="WhiteSmoke"
+             Icon="menu_icon.png">
+
+    <StackLayout>
+        <Button x:Name="BasicCalculatorPage" Text="Standardní kalkulačka" BorderWidth="0" HorizontalOptions="Start" FontSize="20" BackgroundColor="WhiteSmoke" Margin="15,8,0,6"></Button>
+        <Button x:Name="Formulas" Text="Vzorce" BorderWidth="0" HorizontalOptions="Start" FontSize="20" BackgroundColor="WhiteSmoke" Margin="15,5,0,6"></Button>
+        <Button x:Name="Convertor" Text="Převodník" BorderWidth="0" HorizontalOptions="Start" FontSize="20" BackgroundColor="WhiteSmoke" Margin="15,5,0,6"></Button>
+        <Button x:Name="History" Text="Historie" BorderWidth="0" HorizontalOptions="Start" FontSize="20" BackgroundColor="WhiteSmoke" Margin="15,5,0,6"></Button>
+    </StackLayout>
+</ContentPage>
